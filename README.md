@@ -30,7 +30,7 @@ cors_proxy.createServer({
 });
 
 ```
-Request examples:
+ 	Request examples:
 
 * `http://localhost:8080/http://google.com/` - Google.com with CORS headers
 * `http://localhost:8080/google.com` - Same as previous.
@@ -137,7 +137,7 @@ CORS Anywhere as an open proxy.
 For instance, to run a CORS Anywhere server that accepts any request from some example.com sites on
 port 8080, use:
 ```
-export PORT=8080
+export CORSANYWHERE_PORT=8080
 export CORSANYWHERE_WHITELIST=https://example.com,http://example.com,http://example.com:8080
 node server.js
 ```
@@ -151,7 +151,7 @@ For example, to blacklist abuse.example.com and rate-limit everything to 50 requ
 except for my.example.com and my2.example.com (which may be unlimited), use:
 
 ```
-export PORT=8080
+export CORSANYWHERE_PORT=8080
 export CORSANYWHERE_BLACKLIST=https://abuse.example.com,http://abuse.example.com
 export CORSANYWHERE_RATELIMIT='50 3 my.example.com my2.example.com'
 node server.js
